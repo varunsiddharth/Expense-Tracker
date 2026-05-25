@@ -1,5 +1,7 @@
 const button = document.querySelector("button");
 
+const downloadButton = document.querySelector("#download-btn");
+
 const list = document.querySelector("#expense-list");
 
 const expenseAmount =
@@ -191,5 +193,35 @@ button.addEventListener("click", function () {
     expenseDate.value = "";
 
     expenseNote.value = "";
+
+});
+downloadButton.addEventListener("click", function () {
+
+    let csv =
+    "Category,Amount,Date,Note\n";
+
+    expenses.forEach(function (expense) {
+
+        csv +=
+`${expense.category},${expense.amount},${expense.date},${expense.note}\n`;
+
+    });
+
+    const blob = new Blob(
+        [csv],
+        { type: "text/csv" }
+    );
+
+    const url =
+    window.URL.createObjectURL(blob);
+
+    const a =
+    document.createElement("a");
+
+    a.href = url;
+
+    a.download = "expenses.csv";
+
+    a.click();
 
 });
