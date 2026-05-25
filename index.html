@@ -5,12 +5,70 @@
         <link rel="stylesheet" href="styles.css">
     </head>
         <body>
-            <h1>Expense Tracker</h1>
-            <input type="text" id="expense-name" placeholder="Enter expense name">
-            <input type="number" id="expense-amount" placeholder="Enter amount">
-            <button>Add Expense</button>
-            <h2>Total: ₹<span id="total">0</span></h2>
-            <ul id="expense-list"></ul>
-            <script src="script.js"></script>
+            <div class="container">
+                <div class="header">
+                <h1>Expense Tracker</h1>
+                <p>Track and manage your expenses</p>
+            </div>
+
+    <div class="summary-cards">
+
+        <div class="card">
+
+            <h3>Total Spent</h3>
+
+            <h2>₹<span id="total">0</span></h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Total Entries</h3>
+
+            <h2 id="total-entries">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Top Category</h3>
+
+            <h2 id="top-category">Food</h2>
+
+        </div>
+
+    </div>
+
+    <div class="expense-form-section">
+
+        <h2>Add Expense</h2>
+
+        <input
+            type="text"
+            id="expense-name"
+            placeholder="Expense Name"
+        >
+
+        <input
+            type="number"
+            id="expense-amount"
+            placeholder="Amount"
+        >
+
+        <button>Add Expense</button>
+
+    </div>
+
+    <div class="expense-list-section">
+
+        <h2>Recent Expenses</h2>
+
+        <ul id="expense-list"></ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
         </body>
 </html>
