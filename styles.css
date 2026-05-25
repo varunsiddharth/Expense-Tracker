@@ -1,8 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: Georgia, serif;
+    background: #f7f5f2;
     margin: 0;
     padding: 40px;
+    color: #222;
 }
 
 .container {
@@ -11,16 +12,18 @@ body {
 }
 
 .header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .header h1 {
-    font-size: 40px;
-    margin-bottom: 5px;
+    font-size: 72px;
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
 .header p {
-    color: gray;
+    color: #777;
+    font-size: 18px;
 }
 
 .summary-cards {
@@ -31,52 +34,98 @@ body {
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 20px;
     flex: 1;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .card h3 {
-    color: gray;
-    margin-bottom: 10px;
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card h2 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: normal;
 }
 
 .expense-form-section,
 .expense-list-section {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 20px;
     margin-bottom: 30px;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-input {
+.expense-form-section h2,
+.expense-list-section h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.expense-form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.expense-form-section h2 {
+    grid-column: 1 / -1;
+}
+
+#expense-name {
+    grid-column: 1 / -1;
+}
+
+input,
+select {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    font-size: 15px;
     box-sizing: border-box;
 }
 
 button {
-    background: #ff7a59;
+    background: #f97316;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
+    padding: 14px 20px;
+    border-radius: 12px;
     cursor: pointer;
+    font-size: 15px;
+}
+
+.expense-form-section button {
+    width: 100%;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
